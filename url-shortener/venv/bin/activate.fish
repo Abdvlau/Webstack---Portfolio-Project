@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/user/Desktop/Webstack---Portfolio-Project/back-end/venv"
+set -gx VIRTUAL_ENV "/Users/user/Desktop/Webstack---Portfolio-Project/url-shortener/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
