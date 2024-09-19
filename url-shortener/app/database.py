@@ -6,5 +6,5 @@ load_dotenv()
 
 MONGODB_URI = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
 client = MongoClient(MONGODB_URI)
-db = client.url_shortener
+db = client.mydatabase
 urls_collection = db.urls

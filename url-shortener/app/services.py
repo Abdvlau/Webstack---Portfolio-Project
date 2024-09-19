@@ -43,4 +43,5 @@ def get_original_url(short_url: str) -> Optional[URLResponse]:
 
 def get_all_urls() -> list[URLResponse]:
     urls = list(urls_collection.find())
+    # print(urls)
     return [URLResponse(**url) for url in urls]
