@@ -1,0 +1,18 @@
+{
+
+    "build": [
+{
+    "src": "url-shortener/main.py",
+    "use": "@vercel/python"
+}
+],
+
+"routes":[
+    {
+    "src":   "/(.*)",
+    "dest": "url-shortener/main.py"
+    }
+   
+
+]
+}
