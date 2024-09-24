@@ -11,7 +11,7 @@ app = FastAPI(
 
 app.include_router(url.router, prefix="/api", tags=["URL Shortener"])
 
-@app.get("/api/welcome", tags=["Root"])
+@app.get("/", tags=["Root"])
 async def read_root():
     return {"message": "Welcome to the URL Shortener API! Visit /docs for API documentation."}
 
