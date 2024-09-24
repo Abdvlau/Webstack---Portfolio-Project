@@ -1,4 +1,6 @@
+import os
 from fastapi import FastAPI
+import uvicorn
 from app.routers import url
 from fastapi.responses import RedirectResponse
 from app.services import get_original_url
@@ -15,6 +17,6 @@ app.include_router(url.router, prefix="/api", tags=["URL Shortener"])
 async def read_root():
     return {"message": "Welcome to the URL Shortener API! Visit /docs for API documentation."}
 
-
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000) #type: ignore
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
